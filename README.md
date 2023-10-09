@@ -36,7 +36,7 @@ The User-app is a robust solution built on top of Next.js - a comprehensive full
 
 ```mermaid
 stateDiagram
-    Client(NEXT.JS) --> Server(NEXT.JS && Prisma)
+    Client(NEXT.JS) --> Server(NEXT.JS)
     Server(Prisma) --> DataBase(PostgreSQL)
     Server(NEXT.JS) --> Client(NEXT.JS)
 ```
