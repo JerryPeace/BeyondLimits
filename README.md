@@ -40,11 +40,3 @@ state diagram
     Server(NEXT.JS and Prisma) --> DataBase(PostgreSQL)
     Server(NEXT.JS and Prisma) --> Client(NEXT.JS and Typescript)
 ```
-
-###  Application Data Flow
-
-```mermaid
-stateDiagram
-    Client(NEXT.JS and Typescript) --> Server(NEXT.JS and Prisma)
-    Server(NEXT.JS and Prisma) --> DataBase(PostgreSQL)
-```
