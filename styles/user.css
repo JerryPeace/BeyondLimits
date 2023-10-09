@@ -1,0 +1,119 @@
+.form-builder {
+  .report-layout-page {
+    margin-bottom: 30px;
+
+    .main-body {
+      display: flex;
+      flex-direction: column;
+
+      .grid-area {
+        flex: auto;
+      }
+    }
+
+    .base-item {
+      width: 100%;
+      height: 100%;
+
+      .delete-button {
+        float: right;
+        color: gray;
+        cursor: pointer;
+      }
+
+      .title-input {
+        margin: 3px;
+      }
+
+      .ant-table-body {
+        height: 100% important;
+      }
+    }
+
+    .image-item {
+      background: var(--chakra-colors-telegram-300);
+      position: relative;
+
+      .delete-button {
+        color: white;
+      }
+
+      .upload-btn {
+        border: 0;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+      }
+
+      .dropzone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        .ant-spin-dot-item {
+          background-color: white;
+        }
+        .ant-spin-text {
+          color: white;
+          text-shadow: 0 0 0 white;
+        }
+      }
+    }
+
+    .table-item {
+      background: #e4e4e4;
+    }
+
+    .grid-area {
+      flex: auto;
+      height: 652px;
+      width: 1110px;
+      border: solid 1px black;
+      overflow: hidden;
+
+      .draggable-form-item.editing {
+        border: 2px solid green;
+      }
+
+      .react-grid-item {
+        transition: none;
+      }
+
+      .react-grid-item.resizing {
+        z-index: 5;
+      }
+
+      .react-grid-placeholder {
+        background: #bbb;
+        opacity: 1;
+      }
+    }
+
+    .editable-cell {
+      position: relative;
+    }
+
+    .editable-cell-value-wrap {
+      padding: 3px 12px;
+      cursor: pointer;
+    }
+
+    .editable-row:hover .editable-cell-value-wrap {
+      padding: 4px 11px;
+      border: 1px solid #d9d9d9;
+      border-radius: 2px;
+    }
+
+    .ant-table-cell {
+      font-size: 13px;
+      height: 30px;
+    }
+
+    .ant-table.ant-table-small .ant-table-tbody>tr>td {
+      padding: 2px;
+    }
+
+  }
+}
