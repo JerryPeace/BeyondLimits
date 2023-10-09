@@ -1,3 +1,4 @@
+import { UserUpdateType } from '@@src/constants/user';
 import { Prisma, PrismaClient, User } from '@prisma/client';
 const prisma = new PrismaClient();
 
@@ -10,16 +11,20 @@ export async function checkUserExist(username: string): Promise<Partial<User> | 
   return user;
 }
 
-export async function update({ id, username, password, address }: User) {
+export async function update({ id, username, password, address, passwordChanged }: UserUpdateType) {
+  const data: Prisma.UserUpdateInput = {
+    username: username,
+    password: password,
+    address: address,
+  };
+  if (!passwordChanged) {
+    delete data.password;
+  }
   await prisma.user.update({
     where: {
       id,
     },
-    data: {
-      username,
-      password,
-      address,
-    },
+    data,
   });
 }
 

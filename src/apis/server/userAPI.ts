@@ -8,6 +8,7 @@ import {
   remove,
 } from '@@src/apis/repositories/user';
 import { CustomerError } from '@@src/utils/error';
+import { UserUpdateType } from '@@src/constants/user';
 
 async function getSingleUser({ id }: { id: number }) {
   try {
@@ -32,8 +33,7 @@ async function createUser(data: User) {
   }
 }
 
-async function updateUser(data: User) {
-  console.log('updateUser', data);
+async function updateUser(data: UserUpdateType) {
   try {
     await update(data);
   } catch (error) {

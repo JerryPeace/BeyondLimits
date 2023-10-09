@@ -38,23 +38,17 @@ export const userFieldConfig: UserFieldConfig = {
   },
 };
 
-export const userColumnNameMap = {
-  [UserFieldKey.username]: 'User Name',
-  [UserFieldKey.password]: 'Password',
-  [UserFieldKey.address]: 'Address',
-  [UserFieldKey.updatedAt]: 'Last Updated',
-} as const;
-
 export interface UserDataType {
   [UserFieldKey.id]: number;
   [UserFieldKey.username]: string;
   [UserFieldKey.address]: string;
   [UserFieldKey.updatedAt]: Date;
 }
-// user initialState
-export const initialState: UserDataType = {
-  [UserFieldKey.id]: 0,
-  [UserFieldKey.username]: '',
-  [UserFieldKey.address]: '',
-  [UserFieldKey.updatedAt]: new Date(),
-};
+
+export interface UserUpdateType {
+  [UserFieldKey.id]: number;
+  [UserFieldKey.username]: string;
+  [UserFieldKey.password]: string;
+  [UserFieldKey.address]: string;
+  passwordChanged: boolean;
+}
