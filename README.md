@@ -31,7 +31,15 @@ The User-app is a robust solution built on top of Next.js - a comprehensive full
   pnpm run start:local
   open http://localhost:3000/neptune
   ```
-  ```
+
+###  Application Data Flow
+
+```mermaid
+state diagram
+    Client(NEXT.JS and Typescript) --> Server(NEXT.JS and Prisma)
+    Server(NEXT.JS and Prisma) --> DataBase(PostgreSQL)
+    Server(NEXT.JS and Prisma) --> Client(NEXT.JS and Typescript)
+```
 
 ###  Application Data Flow
 
